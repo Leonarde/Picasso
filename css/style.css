@@ -103,7 +103,6 @@ section {
 }
 .collection .wrapper {
   margin: 10rem auto;
-  width: 100rem;
   text-align: center;
 }
 
@@ -121,7 +120,7 @@ section {
 }
 
 .option {
-  margin: 10rem 0;
+  margin: 10rem 7rem;
 }
 
 .option li {
