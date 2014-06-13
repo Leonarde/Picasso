@@ -1,0 +1,3 @@
+@mixin shake { 
+	@include animation(shake 2s ease-in-out both);       
+}

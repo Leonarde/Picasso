@@ -1,0 +1,53 @@
+//rotateYInRight
+
+@include keyframes (rotateYInRight) { 
+	0% {
+	    @include transform(perspective(600) rotateY(-90deg));
+	    @include transform-origin(0,50%);
+	}
+	10% {
+	    @include transform(perspective(600) rotateY(60deg));
+	    @include transform-origin(0,50%);
+	}
+	20% {
+	    @include transform(perspective(600) rotateY(-50deg));
+	    @include transform-origin(0,50%);
+	} 
+	30% {
+	    @include transform(perspective(600) rotateY(40deg));
+	    @include transform-origin(0,50%);
+	} 
+	40% {
+	    @include transform(perspective(600) rotateY(-30deg));
+	    @include transform-origin(0,50%);
+	} 
+	50% {
+	    @include transform(perspective(600) rotateY(25deg));
+	    @include transform-origin(0,50%);
+	} 
+	60% {
+	    @include transform(perspective(600) rotateY(-20deg));
+	    @include transform-origin(0,50%);
+	}
+	70% {
+	    @include transform(perspective(600) rotateY(15deg));
+	    @include transform-origin(0,50%);
+	} 
+	80% {
+	    @include transform(perspective(600) rotateY(-10deg));
+	    @include transform-origin(0,50%);
+	} 
+	90% {
+	    @include transform(perspective(600) rotateY(7deg));
+	    @include transform-origin(0,50%);
+	} 
+	95% {
+	    @include transform(perspective(600) rotateY(-3deg));
+	    @include transform-origin(0,50%);
+	}  
+	100% {
+	    @include transform(perspective(600) rotateY(0deg));
+	    @include transform-origin(0,50%);
+	} 
+} 
+   

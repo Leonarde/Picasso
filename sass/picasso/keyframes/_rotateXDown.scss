@@ -1,0 +1,13 @@
+//rotateXDown
+
+@include keyframes (rotateXDown) { 
+	0% {
+	    @include transform(perspective(600) rotateX(90deg));
+	    @include transform-origin(50%,0);
+	}
+	100% {
+	    @include transform(perspective(600) rotateX(0deg));
+	    @include transform-origin(50%,0);
+	} 
+} 
+    

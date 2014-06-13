@@ -1,0 +1,10 @@
+//flip
+
+@include keyframes (flip) { 
+	0% {
+	   @include transform(perspective(200) rotateX(0deg));
+	}
+	100% {
+	   @include transform(perspective(200) rotateX(360*3deg));
+	} 
+}

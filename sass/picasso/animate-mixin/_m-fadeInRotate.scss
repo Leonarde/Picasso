@@ -1,0 +1,3 @@
+@mixin fadeInRotate { 
+	@include animation(fadeInRotate 1s ease-in-out both);       
+} 

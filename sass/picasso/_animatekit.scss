@@ -1,0 +1,48 @@
+@import "compass/css3";
+
+//animation mixin 
+@mixin animation($animation-1: default, $animation-2: false, $animation-3: false, $animation-4: false, $animation-5: false, $animation-6: false, $animation-7: false, $animation-8: false, $animation-9: false, $animation-10: false) {
+   $animation: compact($animation-1, $animation-2, $animation-3, $animation-4, $animation-5, $animation-6, $animation-7, $animation-8, $animation-9, $animation-10);
+	@include experimental(animation, $animation, $moz: false, $ms: false, $o: false);  
+}
+
+@mixin set-experimental-support($moz: false, $webkit: false, $ms: false, $o: false, $khtml: false) {
+  $experimental-support-for-mozilla: $moz;
+  $experimental-support-for-webkit: $webkit;
+  $experimental-support-for-microsoft: $ms; 
+  $experimental-support-for-opera: $o;
+  $experimental-support-for-khtml: $khtml;
+}
+@mixin with-only-support-for($moz: false, $webkit: false, $ms: false, $o: false, $khtml: false) {
+  $original-moz: $experimental-support-for-mozilla; 
+  $original-webkit: $experimental-support-for-webkit;
+  $original-o: $experimental-support-for-opera;
+  $original-ms: $experimental-support-for-microsoft;
+  $original-khtml: $experimental-support-for-khtml;
+
+  @include set-experimental-support($moz, $webkit, $ms, $o, $khtml);
+
+  @content;
+
+  @include set-experimental-support($original-moz, $original-webkit, $original-ms, $original-o, $original-khtml);
+}
+
+//keyframe mixin
+@mixin keyframes(
+  $name, 
+  $webkit: true,
+  $official: true
+) { 
+
+  @if $webkit {
+    @include with-only-support-for($webkit: true) {
+      @-webkit-keyframes #{$name} { @content; }
+    }
+  }
+  @if $official {
+    @include with-only-support-for($webkit: true,$ms: true) {
+      @keyframes #{$name} { @content; }
+    }
+  }
+
+} 

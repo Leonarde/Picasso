@@ -1,0 +1,14 @@
+//slideInScale
+
+@include keyframes (slideInScale) { 
+	0% {
+	   @include transform(translateY(-1000px) scale(2));
+	}
+	50% {
+	   @include transform(translateY(0) scale(2));
+	}
+	100% {
+	   @include transform(scale(1));
+	} 
+} 
+     

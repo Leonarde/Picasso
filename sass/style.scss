@@ -1,0 +1,93 @@
+@charset "utf-8"; 
+@import "compass/reset"; 
+@import "compass/css3"; 
+@import "variable"; 
+@import "compass";
+
+html {
+	font-size: $text-original;
+}
+body {
+	font-family: $font-fm;
+	font-size: $text-m;
+}
+header {
+	padding: 20px 0;
+	color: white;
+	background: $blue;
+	h1 {
+		font-size: 7rem;
+		line-height: 8rem;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	p {
+		font-size: $text-xl;
+		margin-left: auto; 
+		margin-right: auto; 
+		width: 70rem;
+		line-height: 2.4rem;
+		text-align: center;
+		padding: 10px 0;
+	}
+}
+section {
+	@include clearfix;
+}
+.collection {
+	background: white;
+	@include legacy-pie-clearfix;
+	.wrapper {
+		margin: 10rem auto;
+		width: 100rem;
+		text-align: center;
+	}
+}
+#sample {
+	display: inline-block;
+	width: 12*1.68rem;
+	font-size: $text-huge;
+	text-align: center;
+	position: relative;
+	line-height: 12rem;
+	color: #fff;
+	border-radius: .3rem; 
+	background-color: lighten($blue,12%); 
+	z-index: 99; 
+}
+
+.option { 
+	margin: 10rem 0;
+}
+.option {
+	li {
+		display: inline;
+		margin-right: 15px;
+		button {
+		display: inline-block;
+		padding: 0 1.5rem;
+		font-size: $text-l;
+		line-height: 3rem;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		cursor: pointer;
+		border: none;
+		border-radius: .3rem;
+		color: #fff;
+		outline: none;
+		background-color: lighten($red,10%);
+		-webkit-transition: all .3s cubic-bezier(0.15, 0.65, 0.4, 1);
+		-moz-transition: all .3s cubic-bezier(0.15, 0.65, 0.4, 1);
+		-ms-transition: all .3s cubic-bezier(0.15, 0.65, 0.4, 1);
+		-o-transition: all .3s cubic-bezier(0.15, 0.65, 0.4, 1);
+		transition: all .3s cubic-bezier(0.15, 0.65, 0.4, 1);
+		&:hover {
+			background-color: $red;
+			-webkit-transform: scale(1.06);
+			transform: scale(1.06);	 
+		}
+	}
+	}
+}
+

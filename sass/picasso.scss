@@ -1,0 +1,21 @@
+// picasso
+@import "picasso/picasso-mod";     
+
+.flip {
+	@include flip;		
+} 
+.shake {
+	@include shake;
+} 
+.rotateYInRight {
+	@include rotateYInRight;
+}
+.rotateXDown {
+	@include rotateXDown;
+} 
+.fadeInRotate {
+	@include fadeInRotate; 
+}
+.slideInScale {
+	@include slideInScale;
+}

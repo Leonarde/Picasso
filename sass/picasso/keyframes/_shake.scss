@@ -1,0 +1,52 @@
+//shake
+
+@include keyframes (shake) {
+  0% {
+    @include transform(translateX(0px));
+    opacity: 1;
+  }
+
+  10% {
+    @include transform(translateX(-20px));
+  }
+
+  20% {
+    @include transform(translateX(20px));
+  }
+
+  30% {
+    @include transform(translateX(-20px));
+  }
+
+  40% {
+    @include transform(translateX(20px));
+  }
+
+  50% {
+    @include transform(translateX(-20px));
+  }
+
+  60% {
+    @include transform(translateX(20px));
+  }
+
+  70% {
+    @include transform(translateX(-20px));
+  }
+
+  80% {
+    @include transform(translateX(20px));
+  }
+
+  90% {
+    @include transform(translateX(-20px));
+  }
+
+  100% {
+    @include transform(translateX(0px));
+    opacity: 0;
+  }
+}
+
+
+

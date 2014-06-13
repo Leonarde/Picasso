@@ -1,0 +1,3 @@
+@mixin slideInScale { 
+	@include animation(slideInScale 1s ease-in-out both);       
+}

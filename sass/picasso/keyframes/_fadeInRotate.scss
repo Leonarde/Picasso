@@ -1,0 +1,30 @@
+//fadeInRotate
+
+@include keyframes (fadeInRotate) { 
+	0% {
+		@include transform(perspective(400) translateX(-1200px) rotateX(91deg));
+		@include transform-origin(50%,100%);
+	    opacity: .3;
+	}
+	20% {
+		background-color: yellow;
+	}
+	40% {
+		background-color: red;
+	}
+	55% {
+		background-color: cyan;
+	}
+	60% {
+		@include transform(perspective(400) translateX(0) rotateX(91deg));
+		@include transform-origin(50%,100%);
+	    opacity: .9;
+	}
+
+	100% {
+	    @include transform(perspective(400) rotateX(0deg));
+	    @include transform-origin(50%,100%);
+	    opacity: 1;
+	} 
+} 
+     

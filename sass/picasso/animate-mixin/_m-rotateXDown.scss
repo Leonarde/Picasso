@@ -1,0 +1,4 @@
+//mixin rotateXDown 
+@mixin rotateXDown { 
+	@include animation(rotateXDown 1s ease-in-out both);       
+}   

@@ -1,0 +1,4 @@
+//rotateYInRight
+@mixin rotateYInRight { 
+	@include animation(rotateYInRight 3s ease-in-out both);       
+}

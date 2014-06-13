@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/picasso.css">
+</head>
+<body>
+	<header>
+		<h1>Picasso</h1>
+		<p>Picsso is a library, toolkit and also a framework of CSS animation based on Sass</p>
+	</header>
+	<section class="collection">
+		<div class="wrapper">
+			<p id="sample">Let's move!</p>
+			<ul class="option">
+				<li>
+					<button class="trigger">
+						shake
+					</button>
+				</li>
+				<li>
+					<button class="trigger">
+						flip
+					</button>
+				</li>
+				<li>
+					<button class="trigger">
+						rotateXDown
+					</button>
+				</li>
+				<li>
+					<button class="trigger">
+						rotateYInRight
+					</button>
+				</li>
+				<li>
+					<button class="trigger">
+						fadeInRotate
+					</button>
+				</li>
+				<li>
+					<button class="trigger">
+						rotateXDown
+					</button>
+				</li>
+				<li>
+					<button class="trigger">
+						slideInScale
+					</button>
+				</li>
+			</ul>
+		</div>
+	</section>
+	</header>
+	<section>
+		<!-- <p class="picasso">Let's move!</p>
+		<p class="picasso">Let's move!</p> -->
+	</section>
+	<footer>
+		
+	</footer>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script>
+	  function letsMove(x) {
+	    $('#sample').removeClass().addClass(x).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	      $(this).removeClass();
+	    });
+	  };
+
+	  $(document).ready(function(){
+	    $('.trigger').click(function(){
+	      var pica = $(this).text();
+	      letsMove(pica);
+	    });
+	   
+	  });
+
+	</script>
+</body>
+</html>

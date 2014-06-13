@@ -1,0 +1,5 @@
+// flip-mixin
+@mixin flip { 
+	@include animation(flip 2s ease-in-out both);       
+}     
+           
